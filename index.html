@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body class="p-4">
+  
+  <h1>Lista artykułów</h1>
+
+  <div>
+    <label>Sortuj:</label>
+    <select id="sort-select" class="border p-1">
+      <option value="created_at.asc">po dacie rosnąco</option>
+      <option value="created_at.desc">po dacie malejąco</option>
+      <option value="title.asc">po nazwie alfabetycznie</option>
+    </select>
+  </div>
+
+  <div id="articles-list" class="space-y-4 my-6"></div>
+
+  <hr>
+
+  <h2>Dodaj nowy artykuł</h2>
+  <form id="add-article-form" class="space-y-2 max-w-md">
+    <div>
+      <label class="block">title:</label>
+      <input type="text" id="input-title" class="border p-1 w-full" required>
+    </div>
+    <div>
+      <label class="block">subtitle:</label>
+      <input type="text" id="input-subtitle" class="border p-1 w-full" required>
+    </div>
+    <div>
+      <label class="block">author:</label>
+      <input type="text" id="input-author" class="border p-1 w-full" required>
+    </div>
+    <div>
+      <label class="block">created_at:</label>
+      <input type="datetime-local" id="input-date" class="border p-1 w-full" required>
+    </div>
+    <div>
+      <label class="block">content:</label>
+      <textarea id="input-content" class="border p-1 w-full" required></textarea>
+    </div>
+    <button type="submit" class="bg-blue-300 p-2 rounded">Dodaj artykuł</button>
+  </form>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+ 
+
+</html>
